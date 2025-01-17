@@ -1,0 +1,32 @@
+.sidebar { 
+  width: 325px;
+  background-color: #F2F2F2;
+  padding: 24px;
+  overflow-y: auto;
+  -webkit-box-shadow: 7px 0px 4px -5px rgba(133,133,133,0.5);
+  -moz-box-shadow: 7px 0px 4px -5px rgba(133,133,133,0.5);
+  box-shadow: 7px 0px 4px -5px rgba(133,133,133,0.5);
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 32px
+  }
+}
+
+.empty-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #727272;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
