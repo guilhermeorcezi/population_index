@@ -17,7 +17,7 @@
   {
     "id_geometria": 1,
     "ano": "2006",
-    "populacao": 13550
+    "populacao": 13850
   },
   {
     "id_geometria": 2,
@@ -37,7 +37,7 @@
   {
     "id_geometria": 2,
     "ano": "2006",
-    "populacao": 20210
+    "populacao": 21910
   },
   {
     "id_geometria": 3,
@@ -77,6 +77,6 @@
   {
     "id_geometria": 4,
     "ano": "2006",
-    "populacao": 10930
+    "populacao": 12121
   }
 ]
