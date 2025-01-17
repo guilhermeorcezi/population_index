@@ -6,7 +6,7 @@ import { PopulationInfo } from '../PopulationInfo';
 
 export function Sidebar({ populationData, selectedNeighborhood }: Props) {
 	return (
-		<div className="sidebar" style={{}}>
+		<div className="sidebar">
 			<div
 				className={`sidebar-content ${
 					!selectedNeighborhood && 'space-between'
@@ -18,12 +18,12 @@ export function Sidebar({ populationData, selectedNeighborhood }: Props) {
 				</div>
 
 				{!selectedNeighborhood && (
-					<Fragment>
+					<div className="empty-container">
 						<span className="empty-text">
 							Clique em um dos bairros para visualizar o índice de população
 						</span>
 						<div />
-					</Fragment>
+					</div>
 				)}
 
 				<PopulationInfo

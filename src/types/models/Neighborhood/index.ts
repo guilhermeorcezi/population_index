@@ -26,6 +26,9 @@ export interface FeatureProperties {
   name: string
   setor: string
   zona: string
+  city: string
+  state: string
+  image_url: string
 }
 
 export interface Geometry {

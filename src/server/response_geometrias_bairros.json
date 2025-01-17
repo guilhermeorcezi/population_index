@@ -10,9 +10,12 @@
       "type": "Feature",
       "properties": {
         "id": 1,
-        "name": "Jd. Colinas",
+        "name": "Jardim Colinas",
         "setor": "Aquarius",
-        "zona": "Oeste"
+        "zona": "Oeste",
+        "city": "São José dos Campos",
+        "state": "SP",
+        "image_url": "https://img1.wsimg.com/isteam/ip/0a4fe9b5-6b8b-434f-b68e-cde31f2706b3/COLINAS%201.JPG"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -65,9 +68,12 @@
       "type": "Feature",
       "properties": {
         "id": 2,
-        "name": "Jd. das Industrias",
+        "name": "Jardim das Industrias",
         "setor": "Jd. das Industrias",
-        "zona": "Oeste"
+        "zona": "Oeste",
+        "city": "São José dos Campos",
+        "state": "SP",
+        "image_url": "https://i.ytimg.com/vi/7dSucJOtsmI/maxresdefault.jpg"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -190,9 +196,12 @@
       "type": "Feature",
       "properties": {
         "id": 3,
-        "name": "Jd. Alvorada",
+        "name": "Jardim Alvorada",
         "setor": "Jd. das Industrias",
-        "zona": "Oeste"
+        "zona": "Oeste",
+        "city": "São José dos Campos",
+        "state": "SP",
+        "image_url": "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9ftWwjXgr7v5Znen3XVcMHllDVRJJeIbi3YwVYEtu2g7yOJFuCYwtOUSWp2553iM1Lm0t82FnFud+MzpuLzQ2crGGc7m8oASyffCAn6VkLZpcf43aB9cWO4lGRC7Q4SjYH1tuw6JmU7vcbdrZGVNzT81kDtqm1T8e7esq1EL+3qVNajpt3alXLrjBFwFKLMNAdIz7EIJ8RC9W0J8p0oF7J6yoS7TO7S-K5+hxzlXFx5k9oa+Squ619jCLJU4Vr0lNm4L5VMZWe0S2-TJT-8+5wEDqv3JFhXchgzWgPAoc9j0QdtOlKcEiF6VHrYb4xa5kIzFhaP6ah6FNFRrp73M-aOxPKvwTqmnOWSjh5Y8-qLOKthfIMS2A2EHHjRnLyFRsVL3+LeLr1KrOGnK6Q==.jpg"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -232,9 +241,12 @@
       "type": "Feature",
       "properties": {
         "id": 4,
-        "name": "Pq. Res. Aquarius",
+        "name": "Parque Residencial Aquarius",
         "setor": "Aquarius",
-        "zona": "Oeste"
+        "zona": "Oeste",
+        "city": "São José dos Campos",
+        "state": "SP",
+        "image_url": "https://imgs.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szkhnWr9UfpZS9bJDwnbk9Kawbnev1nxMNm9yHFhIP-MQkSx9WYNvp0hizPNqxU0zlPQZRIiHvyq1552lt-entG+p-6mNlpf56+LfQuTP8L8W37HIDkenloRbeZklLAU8Q-U-Z0TBdLa7PEdsnRu9+mCUYbBCf3VT0V4VqQppwna1Bsee6kVo9T7wFKqA8HLJTP+4URYYX-lYCt407ENDsQK-XFB8p0pK9JGl+XaFOqyqM8zpi38UQ0Uq65etW7Hh1pTOJdVrCuQjO3IP8VsEXewG1e2CX+Bw8gtF+LaVVUTckwiWg+NzcJqpWtlLlPAFkg2WG7sY7kq5l4OTjPH-Ok+bYhJ4rPvO5rLva+zuCumuZyr2wppBut-XP4gBdNr2EA==.jpg"
       },
       "geometry": {
         "type": "MultiPolygon",

@@ -1,8 +1,23 @@
-.neighborhood-info {
+.neighborhood-info {  
   h2 {
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
+  }
+
+  span.city {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  margin: 16px 24px;
+
+}
+
+.image-container {
+  img {
+    width: 325px;
   }
 }
 
@@ -12,3 +27,11 @@
   line-height: 28px;
 }
 
+.population-info {
+  margin: 24px;
+}
+
+.separator {
+  height: 1px;
+  background: #BDBDBD;
+}
