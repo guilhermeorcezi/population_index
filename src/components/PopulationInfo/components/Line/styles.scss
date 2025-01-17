@@ -1,0 +1,46 @@
+.population-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.population-line {
+  height: 16px;
+  border-radius: 4px;
+}
+
+.line-0 {
+  width: 151px;
+  background: #B8F0E7;
+}
+
+.line-1 {
+  width: 160px;
+  background: #76E7D4;
+}
+
+.line-2 {
+  width: 169px;
+  background: #3ED7B3;
+}
+
+.line-3 {
+  width: 173px;
+  background: #38C58B;
+}
+
+.population-year {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 28px;
+
+  
+}
+
+.population-quantity {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+}

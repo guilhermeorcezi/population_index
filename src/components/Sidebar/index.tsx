@@ -2,11 +2,16 @@ import { Fragment } from 'react';
 import './styles.scss';
 import logo from '../../assets/logo.svg';
 import { Props } from './types';
+import { PopulationInfo } from '../PopulationInfo';
 
-export function Sidebar({ population, selectedNeighborhood }: Props) {
+export function Sidebar({ populationData, selectedNeighborhood }: Props) {
 	return (
 		<div className="sidebar" style={{}}>
-			<div className="sidebar-content">
+			<div
+				className={`sidebar-content ${
+					!selectedNeighborhood && 'space-between'
+				}`}
+			>
 				<div className="header">
 					<img src={logo} alt="logo" />
 					<h1>Índice populacional</h1>
@@ -14,25 +19,17 @@ export function Sidebar({ population, selectedNeighborhood }: Props) {
 
 				{!selectedNeighborhood && (
 					<Fragment>
-						<p className="empty-text">
+						<span className="empty-text">
 							Clique em um dos bairros para visualizar o índice de população
-						</p>
+						</span>
 						<div />
 					</Fragment>
 				)}
 
-				{/* {population.length > 0 && (
-						<div> 
-
-
-							<h3>População</h3>
-							{population.map((item) => (
-								<p key={item.id_geometria}>
-									Ano: {item.ano} / População: {item.populacao}
-								</p>
-							))}
-						</div>
-					)} */}
+				<PopulationInfo
+					populationData={populationData}
+					selectedNeighborhood={selectedNeighborhood}
+				/>
 			</div>
 		</div>
 	);

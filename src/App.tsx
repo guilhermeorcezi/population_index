@@ -10,7 +10,9 @@ import './app.scss';
 
 export function App() {
 	const [neighborhoodData, setNeighborhoodData] = useState<Neighborhood>();
-	const [population, setPopulation] = useState<NeighborhoodPopulation[]>([]);
+	const [populationData, setPopulationData] = useState<
+		NeighborhoodPopulation[]
+	>([]);
 	const [selectedNeighborhood, setSelectedNeighborhood] = useState<Feature>();
 
 	const getLocations = async () => {
@@ -21,7 +23,7 @@ export function App() {
 	};
 
 	const getPopulation = async (event: LeafletMouseEvent) => {
-		setPopulation([]);
+		setPopulationData([]);
 
 		const feature = event.sourceTarget.feature;
 		setSelectedNeighborhood(feature);
@@ -29,12 +31,12 @@ export function App() {
 		const response = await fetch('http://localhost:5173/populacao');
 		const allPopulations = await response.json();
 
-		const population = allPopulations.filter(
+		const data = allPopulations.filter(
 			(item: NeighborhoodPopulation) =>
 				item.id_geometria === feature.properties.id
 		);
 
-		setPopulation(population);
+		setPopulationData(data);
 	};
 
 	useEffect(() => {
@@ -44,18 +46,9 @@ export function App() {
 	return (
 		<main className="main">
 			<Sidebar
-				population={population}
+				populationData={populationData}
 				selectedNeighborhood={selectedNeighborhood}
 			/>
-			{/* {population.length > 0 && (
-				<div>
-					{population.map((item) => (
-						<p key={item.id_geometria}>
-							Ano: {item.ano} / População: {item.populacao}
-						</p>
-					))}
-				</div>
-			)} */}
 			<div className="map-container">
 				<MapContainer
 					style={{ height: '100vh' }}

@@ -27,6 +27,13 @@
 .sidebar-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+}
+
+.space-between {
+  justify-content: space-between
+};
+
+.neighborhood-info {
+  margin-top: 24px;
 }
