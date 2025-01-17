@@ -43,7 +43,10 @@ export function App() {
 
 	return (
 		<main className="main">
-			<Sidebar />
+			<Sidebar
+				population={population}
+				selectedNeighborhood={selectedNeighborhood}
+			/>
 			{/* {population.length > 0 && (
 				<div>
 					{population.map((item) => (
