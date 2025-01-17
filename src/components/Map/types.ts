@@ -1,7 +1,8 @@
 import { LeafletMouseEvent } from "leaflet"
 
 export interface Props{
-  getPopulationData: GetPopulationData
+  handleFeatureClick: HandleFeatureClick
+  selectedFeatureId: number
 }
 
-type GetPopulationData = (event: LeafletMouseEvent) => void
+type HandleFeatureClick = (event: LeafletMouseEvent) => void

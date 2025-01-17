@@ -6,7 +6,7 @@ import { Props } from './types';
 import { useEffect, useState } from 'react';
 import { Neighborhood } from '../../types/models/Neighborhood';
 
-export function Map({ getPopulationData }: Props) {
+export function Map({ handleFeatureClick, selectedFeatureId }: Props) {
 	const [neighborhoodData, setNeighborhoodData] = useState<Neighborhood>();
 
 	const getLocations = async () => {
@@ -14,6 +14,14 @@ export function Map({ getPopulationData }: Props) {
 		const features = await response.json();
 
 		setNeighborhoodData(features);
+	};
+
+	const geoJsonStyle = (feature: any) => {
+		return {
+			color:
+				feature.properties.id === selectedFeatureId ? '#EB3131' : '#6c58ff',
+			weight: feature.properties.id === selectedFeatureId ? 3 : 1,
+		};
 	};
 
 	useEffect(() => {
@@ -37,9 +45,9 @@ export function Map({ getPopulationData }: Props) {
 				{neighborhoodData && (
 					<GeoJSON
 						data={neighborhoodData as GeoJsonObject}
-						style={{ color: '#6c58ff' }}
+						style={geoJsonStyle}
 						eventHandlers={{
-							click: (event) => getPopulationData(event),
+							click: (event) => handleFeatureClick(event),
 						}}
 					/>
 				)}

@@ -12,6 +12,7 @@ export function App() {
 		NeighborhoodPopulation[]
 	>([]);
 	const [selectedNeighborhood, setSelectedNeighborhood] = useState<Feature>();
+	const [selectedFeatureId, setSelectedFeatureId] = useState();
 
 	const getPopulationData = async (event: LeafletMouseEvent) => {
 		setPopulationData([]);
@@ -30,13 +31,23 @@ export function App() {
 		setPopulationData(data);
 	};
 
+	const handleFeatureClick = (event: LeafletMouseEvent) => {
+		const feature = event.sourceTarget.feature;
+
+		getPopulationData(event);
+		setSelectedFeatureId(feature.properties.id);
+	};
+
 	return (
 		<main className="main">
 			<Sidebar
 				populationData={populationData}
 				selectedNeighborhood={selectedNeighborhood}
 			/>
-			<Map getPopulationData={getPopulationData} />
+			<Map
+				handleFeatureClick={handleFeatureClick}
+				selectedFeatureId={selectedFeatureId}
+			/>
 		</main>
 	);
 }
