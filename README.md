@@ -1,4 +1,4 @@
-# Population Index
+# Frontend Case: Population Index
 
 ### How to run
 
