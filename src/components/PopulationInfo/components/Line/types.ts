@@ -1,6 +1,5 @@
-import { NeighborhoodPopulation } from "../../../../types/models/Population";
+import { FormattedPopulationData } from "../../types";
 
 export interface Props{
-  index: number;
-  population: NeighborhoodPopulation
+  population: FormattedPopulationData
 }

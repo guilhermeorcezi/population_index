@@ -5,3 +5,7 @@ export interface Props{
   selectedNeighborhood?: Feature
   populationData?: NeighborhoodPopulation[]
 }
+
+export interface FormattedPopulationData extends NeighborhoodPopulation {
+  index: number;
+}

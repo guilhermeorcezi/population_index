@@ -1,12 +1,25 @@
-import { Fragment } from 'react';
+import { Fragment, useMemo } from 'react';
 import './styles.scss';
-import { Props } from './types';
+import { FormattedPopulationData, Props } from './types';
 import { Line } from './components/Line';
 
 export function PopulationInfo({
 	populationData,
 	selectedNeighborhood,
 }: Props) {
+	const formattedPopulationData: FormattedPopulationData[] = useMemo(() => {
+		if (!populationData || populationData.length === 0) return [];
+
+		const sortedData = populationData
+			.slice()
+			.sort((a, b) => a.populacao - b.populacao);
+
+		return sortedData.map((item, index) => ({
+			...item,
+			index,
+		}));
+	}, [populationData]);
+
 	return (
 		<Fragment>
 			{selectedNeighborhood && (
@@ -31,13 +44,13 @@ export function PopulationInfo({
 
 			<div className="separator" />
 
-			{populationData && populationData.length > 0 && (
+			{formattedPopulationData && formattedPopulationData.length > 0 && (
 				<Fragment>
 					<div className="population-info">
 						<h3 className="population-info-title">População por ano</h3>
 
-						{populationData.map((population, index) => (
-							<Line population={population} index={index} />
+						{formattedPopulationData.map((population) => (
+							<Line population={population} />
 						))}
 					</div>
 					<div className="separator" />

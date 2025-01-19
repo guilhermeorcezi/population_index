@@ -12,7 +12,7 @@ export function App() {
 		NeighborhoodPopulation[]
 	>([]);
 	const [selectedNeighborhood, setSelectedNeighborhood] = useState<Feature>();
-	const [selectedFeatureId, setSelectedFeatureId] = useState();
+	const [selectedFeatureId, setSelectedFeatureId] = useState<number>(0);
 
 	const getPopulationData = async (event: LeafletMouseEvent) => {
 		setPopulationData([]);
