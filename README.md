@@ -4,6 +4,11 @@
 
 First of all, make sure you have Node v18 installed. To start the application, at the root of the project, run:
 ```
-yarn // npm install
-yarn dev // npm run dev
+yarn
+yarn dev
+
+or
+
+npm install
+npm run dev
 ```
