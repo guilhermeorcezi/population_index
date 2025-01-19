@@ -1,6 +1,6 @@
 import 'leaflet/dist/leaflet.css';
-import { useEffect, useState } from 'react';
-import { Feature, Neighborhood } from './types/models/Neighborhood';
+import { useState } from 'react';
+import { Feature } from './types/models/Neighborhood';
 import { NeighborhoodPopulation } from './types/models/Population';
 import { LeafletMouseEvent } from 'leaflet';
 import { Sidebar } from './components/Sidebar';

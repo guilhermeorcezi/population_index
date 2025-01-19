@@ -5,6 +5,12 @@ import './styles.scss';
 import { Props } from './types';
 import { useEffect, useState } from 'react';
 import { Neighborhood } from '../../types/models/Neighborhood';
+import {
+	MAP_BOUNDS,
+	MAP_ZOOM,
+	TILE_LAYER_ATTRIBUTION,
+	TILE_LAYER_URL,
+} from './utils';
 
 export function Map({ handleFeatureClick, selectedFeatureId }: Props) {
 	const [neighborhoodData, setNeighborhoodData] = useState<Neighborhood>();
@@ -24,30 +30,22 @@ export function Map({ handleFeatureClick, selectedFeatureId }: Props) {
 		};
 	};
 
+	const mapStyle = { height: '100vh' };
+
 	useEffect(() => {
 		getLocations();
 	}, []);
 
 	return (
 		<div className="map-container">
-			<MapContainer
-				style={{ height: '100vh' }}
-				bounds={[
-					[-23.234708, -45.928813],
-					[-23.198917, -45.900761],
-				]}
-				zoom={15}
-			>
-				<TileLayer
-					url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=BcCw9iWXRyBExU9XfTBr"
-					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-				/>
+			<MapContainer style={mapStyle} bounds={MAP_BOUNDS} zoom={MAP_ZOOM}>
+				<TileLayer url={TILE_LAYER_URL} attribution={TILE_LAYER_ATTRIBUTION} />
 				{neighborhoodData && (
 					<GeoJSON
 						data={neighborhoodData as GeoJsonObject}
 						style={geoJsonStyle}
 						eventHandlers={{
-							click: (event) => handleFeatureClick(event),
+							click: handleFeatureClick,
 						}}
 					/>
 				)}

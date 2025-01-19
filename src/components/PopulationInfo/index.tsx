@@ -7,7 +7,7 @@ export function PopulationInfo({
 	populationData,
 	selectedNeighborhood,
 }: Props) {
-	const formattedPopulationData: FormattedPopulationData[] = useMemo(() => {
+	const formattedPopulationData = useMemo<FormattedPopulationData[]>(() => {
 		if (!populationData || populationData.length === 0) return [];
 
 		const sortedData = populationData
